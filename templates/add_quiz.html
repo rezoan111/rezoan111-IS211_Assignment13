@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Add Quiz</title>
+</head>
+<body>
+    <h1>Add Quiz</h1>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/quiz/add" method="POST">
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject"><br><br>
+
+        <label for="num_questions">Number of Questions:</label>
+        <input type="text" name="num_questions" id="num_questions"><br><br>
+
+        <label for="quiz_date">Quiz Date:</label>
+        <input type="date" name="quiz_date" id="quiz_date"><br><br>
+
+        <input type="submit" value="Add Quiz">
+    </form>
+
+    <p><a href="/dashboard">Back to Dashboard</a></p>
+</body>
+</html>
