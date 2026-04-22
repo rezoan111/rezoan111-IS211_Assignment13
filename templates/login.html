@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Teacher Login</h1>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password"><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
